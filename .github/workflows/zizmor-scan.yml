@@ -28,8 +28,8 @@ on:
         type: string
 
 permissions:
-  contents: read   # needed for private and internal repos
-  actions: read    # needed to read workflow files
+  contents: read  # needed for private and internal repos
+  actions: read  # needed to read workflow files
 
 jobs:
   zizmor:
@@ -89,7 +89,7 @@ jobs:
         run: echo "::notice::💡📖 Rule docs and remediation examples available at https://docs.zizmor.sh/audits/ 📖💡"
 
       - name: Upload SARIF report
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         if: always()
         with:
           name: zizmor-sarif-report
